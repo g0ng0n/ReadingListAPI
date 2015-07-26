@@ -2,6 +2,5 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-require 'rails/test_help'
-require 'minitest/pride'
+
 Rails.application.load_tasks
