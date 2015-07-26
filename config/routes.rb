@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resource :books
+  resources :books
+  resources :finished_books
 end

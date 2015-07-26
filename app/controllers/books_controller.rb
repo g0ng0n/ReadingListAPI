@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-	def show
+	def index
 		books = Book.all
 
 		if rating = params[:rating]
