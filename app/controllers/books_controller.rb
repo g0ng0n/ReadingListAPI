@@ -19,7 +19,16 @@ class BooksController < ApplicationController
 
 	end
 
+	def destroy
+		book = Book.find(params[:id])
+
+		if book.destroy!
+			render nothing: true, status: 204
+		end
+	end
+	
 	def book_params
-		params.require(:book).permit(:title, :rating)
+		params.require(:book).permit(:title, :rating,
+			:author, :genre_id, :review, :amazon_id)
 	end
 end
